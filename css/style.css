@@ -1,8 +1,180 @@
 @font-face {
     font-family: 'norsebold';
-    src: url('norse-bold-webfont.woff2') format('woff2'),
-         url('norse-bold-webfont.woff') format('woff');
+    src: url('../fonts/norse-bold-webfont.woff2') format('woff2'),
+         url('../fonts/norse-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
+}
+
+:root {
+    --text-white: #ffffff;
+    --primary-color: #211d1aff;
+    --secondary-color: #a4ab75ff;
+    --support-one: #76665cff;
+    --alert-color: red;
+
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, serif;
+    font-weight: normal;
+    line-height: 1.5;
+    background: linear-gradient(var(--primary-color), var(--secondary-color));
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: space-around;
+    align-items: stretch;
+    width: 70vw;
+    height: 100vh;
+    border: 1px solid #000000;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 150px 0.1px var(--secondary-color);
+}
+
+.logo-text {
+    font-family: norsebold, 'Courier New', Courier, monospace;
+    color: var(--text-white);
+    font-size: 3rem;
+}
+
+.img-credit {
+    color: var(--text-white);
+}
+
+.logo-section {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../img/rod-long/rod-long-small-unsplash.jpg);
+    background-size: cover;
+}
+
+.logo {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: 30%;
+    width: 100%;
+    background: #7474745d;
+}
+
+.form-section {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background: #f9fafbff;
+    font-size: 80%;
+}
+
+.the-form {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.bg-white {
+    display: flex;
+    flex-flow: row wrap;
+    background: var(--text-white);
+    justify-content: space-around;
+    box-shadow: 0px 0px 10px 1px #888888;
+    padding-top: 2%;
+    padding-bottom: 4%;
+    font-family: 'Candara','Calibri','Segoe','Segoe UI','Optima',Arial,sans-serif;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    width: 40%
+}
+
+input {
+    width: 80%;
+    border: 1px solid #E5E7EB;
+    border-radius: 0.5%;
+    padding: 1%;
+}
+
+input:hover {
+    border: 0.2px solid var(--secondary-color);
+    box-shadow: 0 0 5px 1px var(--secondary-color);
+}
+
+input:focus {
+    border: 0.2px solid var(--secondary-color);
+    outline: none;
+    box-shadow: 0 0 5px 1px var(--secondary-color);
+}
+
+input:invalid:not(:focus):not(:placeholder-shown) {
+    border: 2px solid var(--alert-color);
+    box-shadow: 0 0 5px 1px var(--alert-color);
+}
+
+input:valid:not(:placeholder-shown) {
+    border: 1px solid var(--secondary-color);
+    box-shadow: none;
+}
+
+
+.form-title {
+    margin: 5% 5% 5% 5%;
+}
+
+#submit {
+    margin: 5% 5% 1% 5%;
+    color: var(--text-white);
+    background-color: var(--support-one);
+    padding: 1.5%;
+    border: 2% solid var(--support-one);
+    border-radius: 8%;
+    cursor: pointer;
+}
+
+#submit:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 3px 1px var(--secondary-color);
+}
+
+.log-in {
+    margin: 1% 5% 0 5%;
+}
+
+h2 {
+    margin-left: 5%;
+    margin-right: 5%;
+    color: var(--primary-color);
+}
+
+span {
+    color: var(--alert-color);
+}
+
+@media (max-width: 800px) {
+    .container {
+        width: 100vw;
+    }
 }
