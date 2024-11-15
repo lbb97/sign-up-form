@@ -38,12 +38,12 @@
                 
                     <p class="field">
                         <label for="first-name">FIRST NAME<span aria-label="required">*</span></label>
-                        <input type="text" name="user_first_name" id="first-name" maxlength="2" placeholder="John" required>
+                        <input type="text" name="user_first_name" id="first-name" minlength="2" placeholder="John" required>
                     </p>
 
                     <p class="field">
                         <label for="last-name">LAST NAME<span aria-label="required">*</span></label>
-                        <input type="text" name="user_last_name" id="last-name" maxlength="2" placeholder="Doe" required>
+                        <input type="text" name="user_last_name" id="last-name" minlength="2" placeholder="Doe" required>
                     </p>
 
                     <p class="field">
@@ -53,7 +53,7 @@
 
                     <p class="field">
                         <label for="phone-number">PHONE NUMBER<span aria-label="required">*</span></label>
-                        <input type="tel" name="user_number" id="phone-number" min="10" max="12" placeholder="086 001 0111" required>
+                        <input type="tel" name="user_number" id="phone-number" pattern="[0-9\s]{10,12}" placeholder="086 001 0111" required>
                     </p>
 
                     <p class="field">
@@ -63,7 +63,7 @@
 
                     <p class="field">
                         <label for="password-confirm">CONFIRM PASSWORD<span aria-label="required">*</span></label>
-                        <input type="password" name="user_pwd_confirm" id="password-confirm" min="8" max="16" placeholder="Enter password again">
+                        <input type="password" name="user_pwd_confirm" id="password-confirm" min="8" max="16" placeholder="Enter password again" required>
                     </p>
 
                 </div>
