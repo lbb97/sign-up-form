@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
+    <div class="container">
     <div class="logo-section">
-        <img src="./img/odin-logo/odin-lined.png" class="odin-logo" width="50px" height="50px">
-        <h1 class="logo-text">ODIN</h1>
+
+        <div class="logo">
+
+            <img src="./img/odin-logo/odin-lined.png" class="odin-logo" width="20%">
+        
+            <h1 class="logo-text">ODIN</h1>
+
+        </div>
+
         <p class="img-credit">Photo by <a href="https://unsplash.com/@rodlong?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Rod Long</a> on <a href="https://unsplash.com/photos/a-church-with-a-steeple-h14qZmHumqM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></p>
     </div>
 
     <div class="form-section">
-        <p>
+        <p class="hero-text">
             <h2>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br>
             Sign up <em>now</em> to get started.</h2>
             <h2>You <em>know</em> you want to.</h2>
@@ -23,51 +31,52 @@
         <div class="the-form">
 
             <form action="#" method="post">
-                
+
+                <h2 class="form-title">Let's do this!</h2>
+
                 <div class="bg-white">
-
-                    <h2>Let's do this!</h2>
-
-                    <p>
-                        <label for="first-name">FIRST NAME</label>
-                        <input type="text" name="user_first_name" id="first-name">
+                
+                    <p class="field">
+                        <label for="first-name">FIRST NAME<span aria-label="required">*</span></label>
+                        <input type="text" name="user_first_name" id="first-name" maxlength="2" placeholder="John" required>
                     </p>
 
-                    <p>
-                        <label for="last-name">LAST NAME</label>
-                        <input type="text" name="user_last_name" id="last-name">
+                    <p class="field">
+                        <label for="last-name">LAST NAME<span aria-label="required">*</span></label>
+                        <input type="text" name="user_last_name" id="last-name" maxlength="2" placeholder="Doe" required>
                     </p>
 
-                    <p>
-                        <label for="mail">EMAIL</label>
-                        <input type="email" name="user_mail" id="mail" required>
+                    <p class="field">
+                        <label for="mail">EMAIL<span aria-label="required">*</span></label>
+                        <input type="email" name="user_mail" id="mail" placeholder="user@example.com" required>
                     </p>
 
-                    <p>
-                        <label for="phone-number">PHONE NUMBER</label>
-                        <input type="tel" name="user_number" id="phone-number">
+                    <p class="field">
+                        <label for="phone-number">PHONE NUMBER<span aria-label="required">*</span></label>
+                        <input type="tel" name="user_number" id="phone-number" min="10" max="12" placeholder="086 001 0111" required>
                     </p>
 
-                    <p>
-                        <label for="password"></label>
-                        <input type="password" name="uer_pwd" id="password" required>
+                    <p class="field">
+                        <label for="password">PASSWORD<span aria-label="required">*</span></label>
+                        <input type="password" name="uer_pwd" id="password" min="8" max="16" placeholder="8 - 16 characters" required>
                     </p>
 
-                    <p>
-                        <label for="password-confirm">CONFIRM PASSWORD</label>
-                        <input type="password" name="user_pwd_confirm" id="password-confirm" required>
+                    <p class="field">
+                        <label for="password-confirm">CONFIRM PASSWORD<span aria-label="required">*</span></label>
+                        <input type="password" name="user_pwd_confirm" id="password-confirm" min="8" max="16" placeholder="Enter password again">
                     </p>
 
                 </div>
 
-                <button type="submit">Create Account</button>
+                <button type="submit" id="submit">Create Account</button>
 
             </form>
 
-            <p>Already have an account? <a href="#">Log in</a></p>
+            <p class="log-in">Already have an account? <a href="#" class="log-in-link">Log in</a></p>
 
         </div>
 
+    </div>
     </div>
 </body>
 </html>
